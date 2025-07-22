@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details - EduSupply">
+    <title>Product Details - EduSupply</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">EduSupply</span>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link cart-link">
+                        Cart <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <a href="shop.html">Shop</a>
+            <span>›</span>
+            <span id="productBreadcrumb">Product</span>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="" alt="Product" />
+                    </div>
+                    <div class="image-thumbnails" id="imageThumbnails">
+                        <!-- Thumbnails will be loaded by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-badge" id="productBadge"></div>
+                    <h1 id="productTitle">Product Name</h1>
+                    <div class="product-rating">
+                        <div class="stars" id="productStars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <span class="rating-count" id="ratingCount">(0 reviews)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price" id="currentPrice">$0.00</span>
+                        <span class="original-price" id="originalPrice"></span>
+                        <span class="discount" id="discount"></span>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p id="productDescription">Product description will be loaded here.</p>
+                    </div>
+
+                    <div class="product-features" id="productFeatures">
+                        <h3>Key Features</h3>
+                        <ul id="featuresList">
+                            <!-- Features will be loaded by JavaScript -->
+                        </ul>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button type="button" id="decreaseQty">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button type="button" id="increaseQty">+</button>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-large" id="addToCartBtn">
+                            Add to Cart
+                        </button>
+
+                        <button class="btn btn-secondary btn-large" id="buyNowBtn">
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-meta">
+                        <p><strong>SKU:</strong> <span id="productSku">N/A</span></p>
+                        <p><strong>Category:</strong> <span id="productCategory">N/A</span></p>
+                        <p><strong>In Stock:</strong> <span id="stockStatus">Yes</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Reviews -->
+    <section class="product-reviews">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+
+            <div class="reviews-summary">
+                <div class="average-rating">
+                    <div class="rating-number" id="averageRating">4.8</div>
+                    <div class="rating-stars" id="averageStars">⭐⭐⭐⭐⭐</div>
+                    <div class="total-reviews" id="totalReviews">Based on 48 reviews</div>
+                </div>
+
+                <div class="rating-breakdown">
+                    <div class="rating-bar">
+                        <span>5 ⭐</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 75%"></div>
+                        </div>
+                        <span>36</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 ⭐</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 15%"></div>
+                        </div>
+                        <span>7</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 ⭐</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 8%"></div>
+                        </div>
+                        <span>4</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 ⭐</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 2%"></div>
+                        </div>
+                        <span>1</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 ⭐</span>
+                        <div class="bar">
+                            <div class="fill" style="width: 0%"></div>
+                        </div>
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-list" id="reviewsList">
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Sarah M.</div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-date">March 15, 2024</div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Excellent quality!</h4>
+                        <p>Perfect for my daughter's art class. The colors are vibrant and the brushes are well-made.
+                            Highly recommended for young artists.</p>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Michael R.</div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="review-date">March 10, 2024</div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Great value for money</h4>
+                        <p>Bought this for my classroom and the kids love it. Good quality materials at a reasonable
+                            price.</p>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-name">Jennifer L.</div>
+                        <div class="review-rating">⭐⭐⭐⭐</div>
+                        <div class="review-date">March 5, 2024</div>
+                    </div>
+                    <div class="review-content">
+                        <h4>Good product</h4>
+                        <p>Nice quality, though I wish there were more color options available. Overall satisfied with
+                            the purchase.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>You might also like</h2>
+            <div class="products-grid" id="relatedProductsGrid">
+                <!-- Related products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">📚</span>
+                        <span class="logo-text">EduSupply</span>
+                    </div>
+                    <p>Your trusted partner in education. Providing quality school supplies since 2010.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html?category=stationery">Stationery</a></li>
+                        <li><a href="shop.html?category=notebooks">Notebooks</a></li>
+                        <li><a href="shop.html?category=art">Art Supplies</a></li>
+                        <li><a href="shop.html?category=backpacks">Backpacks</a></li>
+                        <li><a href="shop.html?category=tech">Technology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📍 123 Education Street, Learning City, LC 12345</p>
+                        <p>📞 (555) 123-4567</p>
+                        <p>✉️ info@edusupply.com</p>
+                        <p>🕒 Mon-Fri: 8AM-6PM, Sat: 9AM-4PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduSupply. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

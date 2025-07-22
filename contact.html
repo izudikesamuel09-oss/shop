@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact SurePath School - Get in touch for admissions, inquiries, or support">
+    <title>Contact SurePath School - Get in Touch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon">🎓</span>
+                    <span class="logo-text">SurePath School</span>
+                </a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="shop.html" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link cart-link">
+                        Cart <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact SurePath School</h1>
+            <p>We're here to help with admissions, questions, or any support you need</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Visit Our Campus</h3>
+                    <p>123 Education Avenue<br>Learning City, LC 12345<br>United States</p>
+                    <a href="#" class="contact-link">Get Directions</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>Main Office: (555) 123-4567<br>Admissions: (555) 123-4568<br>Emergency: (555) 123-4569</p>
+                    <a href="tel:+15551234567" class="contact-link">Call Now</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>General: info@surepathschool.edu<br>Admissions: admissions@surepathschool.edu<br>Support:
+                        support@surepathschool.edu</p>
+                    <a href="mailto:info@surepathschool.edu" class="contact-link">Send Email</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 7:30 AM - 4:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                    <a href="#" class="contact-link">Schedule Meeting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Have a question or need assistance? Fill out the form below and we'll get back to you within 24
+                        hours.</p>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiryType">Inquiry Type *</label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">Select an option</option>
+                                <option value="admissions">Admissions Information</option>
+                                <option value="academics">Academic Programs</option>
+                                <option value="shop">School Shop Support</option>
+                                <option value="events">Events & Activities</option>
+                                <option value="general">General Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject"
+                                placeholder="Brief description of your inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6"
+                                placeholder="Please provide details about your inquiry..." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for school updates and events
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Map & Additional Info -->
+                <div class="contact-sidebar">
+                    <div class="map-container">
+                        <h3>Find Us</h3>
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <div class="map-icon">🗺️</div>
+                                <p>Interactive Map</p>
+                                <small>123 Education Avenue, Learning City</small>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-block">View on Google Maps</a>
+                    </div>
+
+                    <div class="quick-contact">
+                        <h3>Quick Contact</h3>
+                        <div class="quick-contact-item">
+                            <strong>Admissions Office</strong>
+                            <p>For enrollment and application questions</p>
+                            <a href="tel:+15551234568">(555) 123-4568</a>
+                        </div>
+
+                        <div class="quick-contact-item">
+                            <strong>Student Services</strong>
+                            <p>For current student and parent support</p>
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                        </div>
+
+                        <div class="quick-contact-item">
+                            <strong>School Shop</strong>
+                            <p>For supply orders and delivery questions</p>
+                            <a href="mailto:shop@surepathschool.edu">shop@surepathschool.edu</a>
+                        </div>
+                    </div>
+
+                    <div class="emergency-contact">
+                        <h3>Emergency Contact</h3>
+                        <p>For urgent matters outside office hours:</p>
+                        <a href="tel:+15551234569" class="emergency-number">(555) 123-4569</a>
+                        <small>Available 24/7 for emergencies only</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions about SurePath School</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What are your admission requirements?</h3>
+                    <p>We welcome students of all backgrounds. Requirements include completed application, academic
+                        records, and an assessment appropriate for the student's grade level.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you offer financial aid?</h3>
+                    <p>Yes, we offer need-based financial assistance and merit scholarships. Contact our admissions
+                        office for more information about available programs.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What is your student-teacher ratio?</h3>
+                    <p>We maintain small class sizes with an average student-teacher ratio of 15:1 to ensure
+                        personalized attention and optimal learning outcomes.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I order school supplies?</h3>
+                    <p>You can order supplies through our online school shop. We offer convenient delivery options and
+                        bulk discounts for families with multiple children.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What extracurricular activities do you offer?</h3>
+                    <p>We offer over 30 clubs and activities including sports, arts, academic competitions, community
+                        service, and leadership programs.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you provide transportation?</h3>
+                    <p>Yes, we offer bus transportation to most areas within a 15-mile radius of the school. Route
+                        information is available upon enrollment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Hours -->
+    <section class="school-hours">
+        <div class="container">
+            <div class="hours-content">
+                <div class="hours-info">
+                    <h2>School Hours & Important Dates</h2>
+
+                    <div class="hours-grid">
+                        <div class="hours-card">
+                            <h3>Regular School Hours</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span>Elementary (K-5):</span>
+                                    <span>8:00 AM - 3:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Middle School (6-8):</span>
+                                    <span>8:15 AM - 3:15 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>High School (9-12):</span>
+                                    <span>8:30 AM - 3:30 PM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hours-card">
+                            <h3>Extended Care</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span>Before School Care:</span>
+                                    <span>7:00 AM - 8:00 AM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>After School Care:</span>
+                                    <span>3:00 PM - 6:00 PM</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Saturday Programs:</span>
+                                    <span>9:00 AM - 2:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="important-dates">
+                    <h3>Upcoming Important Dates</h3>
+                    <div class="dates-list">
+                        <div class="date-item">
+                            <div class="date">Feb 15</div>
+                            <div class="date-info">
+                                <strong>Open House Event</strong>
+                                <p>10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="date-item">
+                            <div class="date">Feb 28</div>
+                            <div class="date-info">
+                                <strong>Science Fair</strong>
+                                <p>9:00 AM - 3:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="date-item">
+                            <div class="date">Mar 10</div>
+                            <div class="date-info">
+                                <strong>Parent-Teacher Conferences</strong>
+                                <p>4:00 PM - 8:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="date-item">
+                            <div class="date">Mar 25</div>
+                            <div class="date-info">
+                                <strong>Spring Break Begins</strong>
+                                <p>No Classes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🎓</span>
+                        <span class="logo-text">SurePath School</span>
+                    </div>
+                    <p>Empowering students for a brighter future through quality education and innovation since 2008.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📺</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Admissions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Academic Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Elementary (K-5)</a></li>
+                        <li><a href="#">Middle School (6-8)</a></li>
+                        <li><a href="#">High School (9-12)</a></li>
+                        <li><a href="#">Summer Programs</a></li>
+                        <li><a href="#">Extracurriculars</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>📍 123 Education Avenue, Learning City, LC 12345</p>
+                        <p>📞 (555) 123-4567</p>
+                        <p>✉️ info@surepathschool.edu</p>
+                        <p>🕒 Mon-Fri: 7:30AM-4:00PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 SurePath School. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
